@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MAL: Motion-Aware Loss with Temporal and Distillation Hints
+    for Self-Supervised Depth Estimation</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-3 publication-title">MAL: Motion-Aware Loss with Temporal and Distillation Hints for Self-Supervised Depth Estimation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Yue-Jiang Dong<sup>1</sup>,</span>
+            <span class="author-block">
+              Fang-Lue Zhang<sup>2</sup>,</span>
+            <span class="author-block">
+              Song-Hai Zhang<sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Tsinghua University</span>
+            <span class="author-block"><sup>2</sup>Victoria University of Wellington</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="./static/pdf/MAL.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/YuejiangDong/MAL"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <center><img src="./static/pdf/teaser.pdf"></center>
+
+      <h2 class="subtitle has-text-centered">
+        Qualitative Demonstration of Our MAL's Effectiveness. 
+        <!-- <br> -->
+        <!-- MAL is designed for multi-frame depth estimation methods (a, c). It's a plug-and-play module (b, d) aimed at improving depth perception (f), especially for moving objects, in dynamic scenes (e). -->
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>Depth perception is crucial for a wide range of robotic applications. Multi-frame self-supervised depth estimation methods have gained research interest due to their ability to leverage large-scale, unlabeled real-world data. However, the self-supervised methods often rely on the assumption of a static scene and their performance tends to degrade in dynamic environments. </p>
+          <p>To address this issue, we present Motion-Aware Loss, which leverages the temporal relation among consecutive input frames and a novel distillation scheme between the teacher and student networks in the multi-frame self-supervised depth estimation methods. Specifically, we associate the spatial locations of moving objects with the temporal order of input frames to eliminate errors induced by object motion. Meanwhile, we enhance the original distillation scheme in multi-frame methods to better exploit the knowledge from a teacher network.</p>
+          <p>MAL is a novel, plug-and-play module designed for seamless integration into multi-frame self-supervised monocular depth estimation methods. Adding MAL into previous state-of-the-art methods leads to a reduction in depth estimation errors by up to 4.2% and 10.8% on KITTI and CityScapes benchmarks, respectively.</p>  
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <video id="qualitative" controls muted loop playsinline height="100%">
+            <source src="./static/videos/ICRA24_1163_VI_i.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+
+  <!--/ Quantitative results. -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Results</h2>
+        <img src="./static/images/quantitative.png">
+    </div>
+  </div>
+  <!--/ Quantitative results. -->
+</div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+      <div class="columns is-centered">
+          <div class="column is-8">
+              <div class="content has-text-centered">
+                  <p>
+                      This great <a href="https://github.com/nerfies/nerfies.github.io">template</a> was
+                      originally made by <a href="https://github.com/nerfies/nerfies.github.io">Keunhong Park</a>.
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+</body>
+</html>
